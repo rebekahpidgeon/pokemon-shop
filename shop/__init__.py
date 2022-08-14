@@ -9,7 +9,7 @@ app.config['SESSION_TYPE'] = "filesystem"
 login_manager = LoginManager()
 login_manager.init_app(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://c21052836:Thepidgeonfamily10@csmysql.cs.cf.ac.uk:3306/c21052836_cm1102_shop'
+#app.config['SQLALCHEMY_DATABASE_URI'] used for sql
 
 db = SQLAlchemy(app)
 
