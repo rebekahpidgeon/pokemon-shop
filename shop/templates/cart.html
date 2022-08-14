@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1 id = "cart_title">My Cart</h1>
+    {% set total_price = namespace(value = 0) %}
+    <!-- {% for cart_item in cart_list %}
+        {% for item in items %}
+            {% if cart_item == item.name %}
+                <p>{{ item.name }} : £<span class = "item_price">{{ "%.2f"|format(item.price) }}</span></p>
+                <form method = "POST" action = "{{url_for('cart')}}" name = "remove_form">
+                    <input type = "submit" class= "remove" name="{{item.name}}" value="Remove">
+                </form>
+                {% set total_price.value = (total_price.value + item.price) %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %} -->
+    {% for item in cart %}
+    <div class = "cart_item_container">
+        <p>{{ item.name }} : £<span class = "item_price">{{ "%.2f"|format(item.price) }}</span></p>
+        <form method = "POST" action = "{{url_for('cart')}}" name = "remove_form">
+            <input type = "submit" class= "remove" name="{{item.id}}" value="Remove">
+        </form>
+        {% set total_price.value = (total_price.value + item.price) %}
+    </div>
+    {% endfor %}
+        
+    <div id = "total_price_container">
+        <p>Total Price: £<span id = "total_price">{{ "%.2f"|format(total_price.value) }}</span></p>
+        <form method = "POST" action = "{{url_for('cart')}}" name="checkout_form">
+            <input type = "submit" id = "checkout" name = "checkout" value = "Checkout">
+        </form>
+    </div>
+
+{% endblock content %}

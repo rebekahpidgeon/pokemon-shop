@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+    <p class = "item_desc"><span class = "prop_name">Name: </span>{{ item.name }}</p>
+    <p class = "item_desc"><span class = "prop_name">Product Description: </span>{{ item.description }}</p>
+    <p class = "item_desc"><span class = "prop_name">Ecological Impact: </span>{{ item.ecological_impact }}</p>
+    <p class = "item_desc"><span class = "prop_name">Provider: </span>{{ item.provider }}</p>
+    <p class = "item_desc"><span class = "prop_name">Origins: </span>{{ item.origins }}</p>
+    <p><img id = "detail_image_sizing" src = "{{url_for('static', filename = 'img/' + item.image_file)}}"></p>
+{% endblock content %}

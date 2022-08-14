@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+<form method="POST" action="">
+    {{ form.csrf_token }}
+    <div id = "register_form_container">
+        {{ form.username.label }} <span id = "username_new">{{ form.username }}</span>
+        {{ form.email.label }} {{ form.email }}
+        {{ form.password.label }} <span id = "password_new">{{ form.password }}</span>
+        {{ form.confirm_password.label }} <span id = "password_confirm">{{ form.confirm_password }}</span>
+        <p id = "register_form_submit">{{ form.submit }}</p>
+    </div>
+</form>
+
+{% for error in form.username.errors %}
+    <span style = "color: red;">[{{ error }}]</span>
+{% endfor %}
+
+{% for error in form.password.errors %}
+    <span style = "color: red;">[{{ error }}]</span>
+{% endfor %}
+
+{% endblock content %}

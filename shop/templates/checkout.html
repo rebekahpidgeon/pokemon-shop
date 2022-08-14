@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1 id = "checkout_title">Hi, {{user}}: Checkout</h1>
+<div id = "checkout_form_container">
+    <form method="POST" action="" class="checkout_form">
+        {{ form.csrf_token }}
+        {{ form.name.label }} {{ form.name }} 
+        {{ form.card_no.label }} {{ form.card_no }}
+        <p id = "checkout_form_submit">{{ form.submit }}</p>
+    </form>
+</div>
+{% for error in form.card_no.errors %}
+    <span style = "color: red; text-align: center;" >[{{ error }}]</span>
+{% endfor %}
+{% endblock content %}

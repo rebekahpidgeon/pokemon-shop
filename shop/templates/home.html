@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1 id = "shop_name">Poke Mart</h1>
+<div class = "sorting_form">
+    <form method = "POST" action = "">
+        {{ form.csrf_token }}
+        <p id = "sort_by"><span id = "sort_by_label">{{ form.sort_type.label }} </span><span id = "sort_by_form">{{ form.sort_type}}</span></p>
+    </form>
+</div>
+{% for item in items %}
+    <div class = "gallery_item">
+        <div class = "gallery_item_container">
+            <p class = "item_image"><img class = "item_image_sizing" src = "{{url_for('static', filename = 'img/' + item.image_file)}}"></p>
+            <div class = "item_properties">
+                <p class = "item_desc"><span class = "prop_name">Name: </span><span class = "item_name">{{item.name}}</span></p>
+                <p class = "item_desc"><span class = "prop_name">Price: </span>£<span class = "item_price">{{"%.2f"|format(item.price)}}</span></p>
+                <p class = "item_desc"><span class = "prop_name">Description:</span> <span class ="item_description">{{item.description}}</span></p>
+            </div>
+        </div>
+        <form method = "POST" action="{{url_for('cart')}}" class = "gallery_item_forms">
+            <span><input type="hidden" name = "itemid" value = "{{item.id}}"> <button type = "submit" class = "gallery_item_buttons"> Add to Cart </button> 
+        </form>
+        <form method = "POST" action = "{{url_for('details')}}" class = "gallery_item_forms">
+            <span></span><input type = "hidden" name = "itemid" value = "{{item.id}}"> <button type = "submit" class = "gallery_item_buttons">Details</button></span>
+        </form>
+    </div>
+{% endfor %}
+{% endblock content %}

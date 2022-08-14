@@ -1,0 +1,274 @@
+/* Properties of layout.html */
+
+
+body {
+    background-color: rgb(242, 200, 200);
+    font-family: 'Georgia';
+}
+#header{
+    background-color: rgb(204, 57, 57);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.nav_links{
+    color: black;
+    margin: 30px 30px 30px 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    background-color: white;
+    border-radius: 2px;
+    padding: 2px 2px 2px 2px;
+    text-decoration: none;
+}
+
+.message_props{
+    font-family: "Georgia";
+}
+
+
+/* Properties of home.html */
+
+
+#sort_by{
+    background-color: rgb(240, 184, 184);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-right: 1000px;
+    text-align: center;
+    border-style: solid;
+    border-color: white;
+    border-width: 5px;
+}
+
+.item_desc{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    background-color: rgb(240, 184, 184);
+}
+.prop_name{
+    color: rgb(204, 57, 57);
+    text-transform: uppercase;
+}
+.gallery_item_container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.gallery_item_forms{
+    display: inline-block;
+    margin-left: 30px;
+}
+.gallery_item_buttons{
+    background-color: black;
+    color: white;
+    border-color: rgb(204, 57, 57);
+    font-size: medium;
+    font-family: 'Georgia';
+
+}
+.item_image_sizing{
+    padding: 10px 10px 10px 10px;
+    margin-left: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 2px;
+    width: 200px;
+    height: 200px;
+}
+#shop_name{
+    font-family: 'Rockwell';
+    text-align: center;
+    margin-left: 10em;
+    margin-right: 10em;
+    border-style: solid;
+    border-color: white;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/* Properties of details.html */
+
+
+#detail_image_sizing{
+    padding: 10px 10px 10px 10px;
+    width: 200px;
+    height: 200px;
+}
+
+
+/* Properties of login.html */
+
+
+#login_form_container {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-left: 400px;
+    margin-right: 400px;
+    padding: 100px 100px 100px 100px;
+    border-style: solid;
+    border-color: white;
+    border-width: 5px;
+    background-color: rgb(240, 184, 184);
+}
+
+#login_form_submit{
+    margin-left: 225px;
+    margin-top: 50px;
+}
+
+
+/* Properties of register.html */
+
+
+#register_form_container {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-left: 130px;
+    margin-right: 130px;
+    padding: 100px 100px 100px 100px;
+    border-style: solid;
+    border-color: white;
+    border-width: 5px;
+    background-color: rgb(240, 184, 184);
+}
+
+#register_form_submit{
+    margin-left: 450px;
+    margin-top: 50px;
+}
+
+
+/* Properties of registered.html */
+
+
+#registration_message{
+    text-align: center;
+    margin-top: 200px;
+    font-size:xx-large;
+    font-family: 'Rockwell';
+    color:rgb(204, 57, 57);
+    font-weight: bold;
+    padding: 100px 100px 100px 100px;
+    border-style: solid;
+    border-color: white;
+    margin-left: 300px;
+    margin-right: 300px;
+    border-width: 5px;
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+
+/* Properties of login_error.html */
+
+
+#login_error_message{
+    text-align: center;
+    font-size:x-large;
+    font-family: 'Rockwell';
+    color:rgb(204, 57, 57);
+    font-weight: bold;
+    margin-top: 200px;
+}
+
+
+/* Properties of cart.html */
+
+
+#cart_title{
+    text-align: center;
+    font-family: 'Rockwell';
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: solid;
+    border-color: white;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+.cart_item_container{
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-color: white;
+    background-color: rgb(240, 184, 184);
+}
+
+#total_price_container{
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    margin-left: 600px;
+    margin-right: 600px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-color: white;
+    background-color: rgb(241, 167, 167);
+}
+
+
+/* Properties of checkout.html */
+
+
+#checkout_title{
+    text-align: center;
+    font-family: 'Rockwell';
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: solid;
+    border-color: white;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+#checkout_form_container{
+    margin-top: 100px;
+    margin-bottom: 150px;
+    margin-left: 400px;
+    margin-right: 400px;
+    padding: 100px 100px 100px 100px;
+    border-style: solid;
+    border-color: white;
+    border-width: 5px;
+    background-color: rgb(240, 184, 184);
+}
+
+#checkout_form_submit{
+    margin-left: 225px;
+    margin-top: 50px;
+}
+
+#checkout_success{
+    text-align: center;
+    margin-top: 200px;
+    font-size:xx-large;
+    font-family: 'Rockwell';
+    color:rgb(204, 57, 57);
+    font-weight: bold;
+    padding: 100px 100px 100px 100px;
+    border-style: solid;
+    border-color: white;
+    margin-left: 250px;
+    margin-right: 250px;
+    border-width: 5px;
+    text-decoration: underline;
+    text-decoration-color: black;
+}

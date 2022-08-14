@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Online Shop</title>
+        <link rel = stylesheet type = text/css href = "{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <div id = "header">
+            <a id = "home" href = "{{url_for('home')}}" class = "nav_links">Home</a>
+            <a id = "login" href = "{{url_for('login')}}" class = "nav_links">Login</a>
+            <a id = "register" href = "{{url_for('register')}}" class = "nav_links">Register</a>
+            <a id = "logout" href = "{{url_for('logout')}}" class = "nav_links">Logout</a>
+            <a id = "show_cart" href = "{{url_for('cart')}}" class = "nav_links">Show Cart</a>
+        </div>
+        <div>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul class="flashes">
+                        {% for message in messages %}
+                            <li class = "message_props">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+        </div>
+        <div id = "content">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        
+
+    </body>
+</html>

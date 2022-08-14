@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<form method="POST" action="">
+    {{ form.csrf_token }}
+    <div id = "login_form_container">
+        <p>{{ form.username.label }} <span id = "username"> {{ form.username }} </span> {{ form.password.label }} <span id = "password"> {{ form.password }} </span> </p>
+        <p id = "login_form_submit">{{ form.submit }}</p>
+    </div>
+</form>
+
+{% for error in form.username.errors %}
+    <span style = "color: red;">[{{ error }}]</span>
+{% endfor %}
+
+{% endblock content %}
